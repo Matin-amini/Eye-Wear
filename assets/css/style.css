@@ -12,6 +12,7 @@
     --color-btn-hover: #cc852c;
     --color-icon:#D39D4E;
     --color-star-rate:#F5C245;
+    --color-h6: #D39D4E;
 }
 
 body{
@@ -194,65 +195,416 @@ z-index: 10;
 
 /************* Sidebar Style ***************/
 
-.sidebar{
-    width: 100%;
-    position: absolute;
-    z-index: 10;
-}
-
-.sidebar-detial{
-        width: 1100px;
-    box-shadow: 3px 3px 10px gray;
-    border-radius: 40px;
-    padding: 15px 0;
-    padding-left: 30px;
+.main{
     background-color: #fff;
+    display: grid;
+    grid-template-columns:repeat(4,auto);
+    grid-template-areas: "item1 item2 item3 item4";
     margin-top: -80px;
+    z-index: 99;
+    position: relative;
+    border-radius: 40px;
+    padding: 18px;
+    text-align: center;
+}
+.main span{
+    color: var(--gray);
+}
+.main i{
+    color: var(--color-icon);
+}
+
+.item1{
+    grid-area: item1;
+    border-right: 2px solid var(--color-icon);
+}
+.item2{
+    grid-area: item2;
+     border-right: 2px solid var(--color-icon);
+}
+.item3{
+    grid-area: item3;
+     border-right: 2px solid var(--color-icon);
+}
+.item4{
+    grid-area: item4;
+}
+.item4 img{
+    width: 130px;
+    height: 30px;
+}
+.item4 i{
+color: var(--color-star-rate);
+}
+.item4 span{
+    font-weight: 700;
+}
+
+/*************  EVERY VISION OF YOU Style***************/
+.v-details{
+    margin-top: 100px;
+    text-align: center;
+}
+.v-details h1{
+    color: var(--color-icon);
+    font-weight: 900;
+    
+}
+.v-details h4{
+    font-weight: bold;
+}
+.article{
+    color: var(--color-icon);
+}
+.btn-vision{
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+.btn-vision:hover{
+    background-color: var(--color-btn-hover);
+    color: #fff;
+    border: 1px solid var(--color-btn-hover);
+    transition: all 0.2s ease-in-out;
+}
+/* OWL slider */
+.owl__item{
+     margin: 20px;
+
+}
+.owl__item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.owl-nav{
+    display: block!important;
+}
+.owl-next{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
-    left: 215px;
+    right: -30px;
+    top: 33%;
+    font-size: 50px!important;
+    transition: all 0.2s ease-in-out;
+}
+.owl-prev{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    left: -30px;
+    top: 33%;
+    font-size: 50px!important;
+    transition: all 0.2s ease-in-out;
+}
+.owl-next span{
+    transform: translateY(-4%)!important;
+}
+.owl-prev span{
+    transform: translateY(-4%)!important;
+}
+.owl-next:hover{
+    background-color: var(--gray)!important;
+    color: white!important;
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 50% !important;
+}
+.owl-prev:hover{
+    background-color: var(--gray)!important;
+    color: white!important;
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 50% !important;
+}
+.btn-slider{
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.btn-slider:hover{
+    background-color: var(--color-btn-hover);
+    color: #fff;
+}
+.owl-off{
+    position: absolute;
+    top: 25px;
+    left: 25px;
 }
 
-.sidebar a{
-    color: #6F6F6F;
+.owl-off p{
+    background-color: #cc0909;
+    color: #fff;
+    width: 60px;
+    font-size: 13px;
 }
 
-.sidebar i{
-    color: #D39D4E;
+/* picture */
+
+.p-main-details{
+    width: 100%;
+    gap: 30px;
 }
 
-.divider{
-    width: 1px;
-    height: 30px;
-    background-color: #D39D4E;
+.p-main-details div{
+    width: 100%;
+}
+.p-main-details img{
+    width: 100%;
+}
+.p-main-details h3{
+    font-size: 36px;
+    font-weight: 900;
+}
+.p-main-details button{
+    padding: 10px 60px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.p-main-details button:hover{
+    background-color: var(--color-btn-hover);
+    color: #fff;
 }
 
-.sitejabber{
-    width: 370px;
+/* pick a style , any style */
+
+.image-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+    column-gap: 5px;
+    width: 100%;
+}
+.side-btn button{
+    background-color: var(--color-btn);
+    color: #fff;
+}
+.side-btn button:hover{
+    background-color: var(--color-btn-hover);
+    color: #000;
 }
 
-.sitejabber img{
-    width:120px;
-    height: 30px;
+.image-items a{
+    width: 100%;
+}
+.image-items img{
+    width: 80%;
+    border-radius: 50%;
+}
+.image-items h5{
+    color: #000;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+/* Ordering */
+.order{
+    background-color: #F9F9F9;
+    margin-top: 100px;
+}
+.order a{
+    color: black;
+}
+.order-details{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+/* Virtual Try-On */
+
+.virtual-main{
+    display: flex;
+    max-width: 100%;
+    gap: 50px;
+    margin-top: 100px;
+}
+.v-left{
+    max-width: 50%;
+}
+.v-left img{
+    width: 100%;
+}
+.v-right{
+    max-width: 50%;
+}
+.v-right button{
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.v-right button:hover{
+    background-color: var(--color-btn-hover);
+    color: #fff;
+}
+/* banner */
+.banner{
+    width: 100%;
+    margin-top: 100px;
+}
+.banner-item{
+    width: 100%;
+}
+.b-item-left{
+    width: 50%;
+}
+.b-item-right{
+    width: 50%;
+}
+.gradient-left{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(117, 178, 179, 1) 0%, rgba(87, 199, 133, 0) 100%);
+}
+.gradient-right{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgb(0, 0, 0) 0%, rgba(87, 199, 133, 0) 100%);
+}
+.b-item-left img{
+ width: 100%;
+}
+.b-item-right img{
+    width: 100%;
+}
+
+/* The reviews are in */
+
+.review{
+    margin-top: 100px;
+}
+.review-h6{
+    color:var(--color-h6);
+    font-weight: bold;
+}
+.review1{
+    background-color: #F6F6F6;
+    padding: 30px 10px;
     border-radius: 15px;
 }
+/* gallery */
 
-.sidebar-left{
-    width: 220px;
+.eyebuydirect{
+    margin-top: 100px;
 }
-.sidebar-center{
-    width: 237px;
+
+.dr-gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
 }
-.sidebar-right{
-    width: 200px;
-}
-.rating-stars{
+.details-left{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 60px;
+    gap: 10px;
 }
-.rating-stars i{
-    color:#F5C245
+.details-left button{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 30px;
+    transition: all 0.2s ease-in-out;
 }
-.sitejabber p{
-    margin-bottom: 0;
-    color: #6F6F6F;
-    font-weight: 700;
+.details-left button:hover{
+    background-color: var(--color-btn-hover);
+    color: #fff;
+    border: none;
+}
+
+/* question */
+
+.question{
+    margin-top: 100px;
+    text-align: center;
+    background-color: #F9F9F9;
+    width: 100%;
+}
+.q-d-images img{
+    max-width: 90px;
+}
+
+/* Exclusive club */
+
+.club{
+    background-color: var(--color-icon);
+}
+
+.club-details a{
+    color: #fff;
+    text-decoration: underline;
+}
+.c-d-e1{
+    left: 12px;
+    top: 7px;
+    font-size: 30px;
+}
+.c-d-e2{
+    right: 12px;
+    top: 13px;
+    font-size: 20px;
+    color: #000;
+}
+.club-details-email input{
+    padding: 10px 50px;
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    outline: none;
+}
+/* Footer */
+footer{
+    background-color: #242424;
+}
+.footer{
+    padding: 50px;
+    
+}
+.bottom-footer{
+    margin-left: 450px;
+}
+.bottom-footer p{
+ border-right: 1px solid #fff;
+ padding-right: 10px;
+ padding-left: 5px;
+}
+.bottom-footer p:last-child{
+    border-right: none;
+}
+.bottom-footer a{
+    color: #fff;
+}
+.bottom-footer a:hover{
+    border-bottom: 1px solid var(--color-btn-hover);
+}
+.left-footer{
+    margin-left: 50px;
+
+}
+.left-footer img{
+    width: 150px;
+}
+#img-3{
+    width: 90px;
+}
+.right-footer{
+    margin-right: 150px;
+    gap: 80px;
+}
+.region p a:hover{
+    border-bottom: 1px solid var(--color-btn-hover) ;
+    
+}
+.r-f-psize{
+    font-size: 13px;
+    
 }
